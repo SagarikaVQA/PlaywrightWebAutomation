@@ -1,0 +1,22 @@
+{
+  "name": "playwrightwebautomation",
+  "version": "1.0.0",
+  "description": "Basic Playwright web automation",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SagarikaVQA/PlaywrightWebAutomation.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SagarikaVQA/PlaywrightWebAutomation/issues"
+  },
+  "homepage": "https://github.com/SagarikaVQA/PlaywrightWebAutomation#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.62.1",
+    "@types/node": "^26.1.2"
+  }
+}
