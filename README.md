@@ -44,3 +44,13 @@ npx playwright test
 
 \- `playwright.config.ts` — Playwright configuration
 
+
+
+\## Branching Strategy
+
+
+
+\- `main` — stable, reviewed code
+
+\- `dev` — active development branch, merged via pull request
+
