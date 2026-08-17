@@ -1,0 +1,18 @@
+{
+  "name": "ui-practice-tables",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Playwright TypeScript automation for QA Playground - ui-practice/tables",
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:debug": "playwright test --debug",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.48.0",
+    "@types/node": "^26.1.2",
+    "typescript": "^5.5.4"
+  }
+}
