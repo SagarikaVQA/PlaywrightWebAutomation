@@ -28,20 +28,26 @@ test.describe('Alerts and Dialogs', () => {
 
 
   // 2. Delayed Alert
-  test('ALD_002 - Handle delayed alert', async ({ page }) => {
+test('ALD_002 - Handle delayed alert', async ({ page }) => {
 
-    page.once('dialog', async dialog => {
+  // Start waiting for the alert before clicking
+  const dialogPromise = page.waitForEvent('dialog');
 
-      expect(dialog.type()).toBe('alert');
+  // Click the button
+  await page.getByRole('button', {
+    name: 'Show Delayed Alert (1.5s)'
+  }).click();
 
-      await dialog.accept();
-    });
+  // Wait until alert actually appears
+  const dialog = await dialogPromise;
 
-    await page.getByRole('button', {
-      name: /Show Delayed Alert/
-    }).click();
-  });
+  // Validate alert
+  expect(dialog.type()).toBe('alert');
+  expect(dialog.message()).toBe('Delayed alert after 1.5s');
 
+  // Click OK
+  await dialog.accept();
+});
 
   // 3. Delete Account - Confirm dialog
   test('ALD_003 - Accept delete account confirmation', async ({ page }) => {
